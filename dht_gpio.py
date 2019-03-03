@@ -5,13 +5,13 @@ import Adafruit_DHT
 import paho.mqtt.client as mqtt
 
 # begin config
-broker_address = '192.168.2.82'
-broker_port = 1883
+broker_address: str = '192.168.2.82'
+broker_port: int = 1883
 
-sensor_type = Adafruit_DHT.DHT22
-gpio_pin = 17
+sensor_type: str = Adafruit_DHT.DHT22  # Adafruit_DHT.DHT11
+gpio_pin: int = 17
 
-label = 'flur'
+label: str = 'flur'
 # end config
 
 humidity, temperature = Adafruit_DHT.read_retry(sensor_type, gpio_pin)

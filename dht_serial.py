@@ -6,13 +6,13 @@ import serial
 import paho.mqtt.client as mqtt
 
 # begin config
-broker_address = '192.168.2.82'
-broker_port = 1883
+broker_address: str = '192.168.2.82'
+broker_port: int = 1883
 
-serial_port = '/dev/ttyUSB0'
-sensor_type = 22  # 11,22
+serial_port: str = '/dev/ttyUSB0'
+sensor_type: int = 22  # 11,22
 
-label = 'wohnzimmer'
+label: str = 'wohnzimmer'
 # end config
 
 arduinoData = serial.Serial(serial_port, 9600)
